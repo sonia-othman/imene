@@ -1,0 +1,63 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "THE PERFECT PRODUCT FOR YOU",
+    "title": "The PERFECT PRODUCT FOR YOU",
+    "description": "Qualified product and excellent customer service is our carefully attitude to every clients",
+    "button": "More Info"
+  },
+  "benefits": {
+    "title": "OUR BENEFITS",
+    "bestProduct": {
+      "title": "Best Product",
+      "description": "All items in perfect and the highest quality ingredients and tested by millions usage around"
+    },
+    "freeShipping": {
+      "title": "Free Shipping",
+      "description": "Enjoy the convenience of free shipping on all orders, no hold on new purchases"
+    },
+    "guarantee": {
+      "title": "Guarantee",
+      "description": "You will be extremely happy with your purchase - we offer a 100% satisfaction guarantee"
+    }
+  },
+  "shop": {
+    "title": "Our Products",
+    "subtitle": "Discover our collection",
+    "filters": {
+      "all": "All Products",
+      "category": "Category",
+      "priceRange": "Price Range",
+      "sortBy": "Sort By",
+      "featured": "Featured",
+      "newest": "Newest",
+      "priceLowToHigh": "Price: Low to High",
+      "priceHighToLow": "Price: High to Low"
+    },
+    "product": {
+      "addToCart": "Add to Cart",
+      "viewDetails": "View Details",
+      "outOfStock": "Out of Stock",
+      "inStock": "In Stock",
+      "newArrival": "New"
+    },
+    "cart": {
+      "title": "Shopping Cart",
+      "empty": "Your cart is empty",
+      "subtotal": "Subtotal",
+      "total": "Total",
+      "checkout": "Checkout",
+      "continueShopping": "Continue Shopping"
+    },
+    "search": {
+      "placeholder": "Search products...",
+      "noResults": "No products found",
+      "showing": "Showing {{count}} products"
+    }
+  }
+}
