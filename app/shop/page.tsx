@@ -1,10 +1,11 @@
-"use client"
+'use client'
+import { useState } from 'react';
 import { ShoppingCart, User, Search, Heart, X, Plus, Minus } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
 import { useCart } from '@/app/context/CartContext';
 import Navbar from '../components/Navbar';
+import { useTranslation } from 'react-i18next';
 
 interface Product {
   id: number;
@@ -18,6 +19,7 @@ interface Product {
 }
 
 export default function ShopPage() {
+  const { t } = useTranslation();
   const [selectedProduct, setSelectedProduct] = useState<Product | null>(null);
   const [quantity, setQuantity] = useState(1);
   const [showNotification, setShowNotification] = useState(false);
@@ -26,22 +28,32 @@ export default function ShopPage() {
   const products: Product[] = [
     { 
       id: 1, 
-      name: 'Imene', 
+      name: t('shop.products.imene.name'), 
       price: '$76.00', 
       originalPrice: '$95.00',
       image: '/images/l11.png', 
-      badge: 'Sale',
-      description: 'Advanced body laser device with smart cooling technology. Perfect for achieving smooth, hair-free skin in the comfort of your home.',
-      features: ['Smart Cooling System', 'Safe for All Skin Types', 'Long-lasting Results', 'Easy to Use']
+      badge: t('shop.products.imene.badge'),
+      description: t('shop.products.imene.description'),
+      features: [
+        t('shop.products.imene.features.0'),
+        t('shop.products.imene.features.1'),
+        t('shop.products.imene.features.2'),
+        t('shop.products.imene.features.3')
+      ]
     },
     { 
       id: 2, 
-      name: 'PLP Laser', 
+      name: t('shop.products.plp.name'), 
       price: '$124.00', 
       image: '/images/l1.png', 
       badge: null,
-      description: 'Professional-grade laser device for effective hair removal. Features advanced IPL technology for salon-quality results.',
-      features: ['IPL Technology', 'Multiple Intensity Levels', 'Large Treatment Window', 'Fast Treatment Time']
+      description: t('shop.products.plp.description'),
+      features: [
+        t('shop.products.plp.features.0'),
+        t('shop.products.plp.features.1'),
+        t('shop.products.plp.features.2'),
+        t('shop.products.plp.features.3')
+      ]
     },
   ];
 
@@ -77,11 +89,11 @@ export default function ShopPage() {
       }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between">
           <div className="max-w-xl">
-            <h1 className="text-6xl font-serif italic text-accent mb-6">
-              Where Technology Meets Beauty
+            <h1 className="text-6xl font-bold text-accent mb-6">
+              {t('shop.hero.title')}
             </h1>
             <p className="text-gray-50 mb-8 leading-relaxed">
-              Discover our range of advanced body laser devices and skincare essentials designed to deliver smooth, radiant, and confident results with every touch.
+              {t('shop.hero.description')}
             </p>
           </div>
         </div>
@@ -101,7 +113,7 @@ export default function ShopPage() {
               </div>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-3">Smart Cooling System</h3>
+              <h3 className="text-2xl text-gray-800 mb-3">{t('shop.categories.feature1')}</h3>
             </div>
           </div>
           
@@ -116,7 +128,7 @@ export default function ShopPage() {
               </div>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-3">Long-Lasting Smoothness</h3>
+              <h3 className="text-2xl    text-gray-800 mb-3">{t('shop.categories.feature2')}</h3>
             </div>
           </div>
           
@@ -131,7 +143,7 @@ export default function ShopPage() {
               </div>
             </div>
             <div className="text-center">
-              <h3 className="text-2xl font-serif text-gray-800 mb-3">Suitable for All Skin Types</h3>
+              <h3 className="text-2xl  text-gray-800 mb-3">{t('shop.categories.feature3')}</h3>
             </div>
           </div>
         </div>
@@ -231,7 +243,7 @@ export default function ShopPage() {
                 </p>
 
                 <div className="mb-6">
-                  <h3 className="text-lg font-semibold text-gray-900 mb-3">Key Features</h3>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-3">{t('shop.categories.keyfeatures')}</h3>
                   <ul className="space-y-2">
                     {selectedProduct.features.map((feature, index) => (
                       <li key={index} className="flex items-center text-gray-700">
@@ -244,7 +256,7 @@ export default function ShopPage() {
 
                 {/* Quantity Selector */}
                 <div className="flex items-center gap-4 mb-8">
-                  <span className="text-gray-700 font-medium">Quantity:</span>
+                  <span className="text-gray-700 font-medium">{t('shop.products.imene.quantity')}</span>
                   <div className="flex items-center border border-gray-300 rounded-lg overflow-hidden">
                     <button
                       onClick={() => setQuantity(Math.max(1, quantity - 1))}
@@ -264,16 +276,17 @@ export default function ShopPage() {
 
                 {/* Buttons */}
                 <div className="flex gap-4">
-                  <button 
-                    onClick={() => {
-                      handleAddToCart(selectedProduct, quantity);
-                      setSelectedProduct(null);
-                    }}
-                    className="flex-1 bg-gradient-to-r from-primary to-rose-400 text-white py-4 rounded-xl font-semibold shadow-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2"
-                  >
-                    <ShoppingCart size={20} />
-                    Add to Cart
-                  </button>
+                  <button
+                  onClick={() => {
+                    handleAddToCart(selectedProduct, quantity);
+                    setSelectedProduct(null);
+                  }}
+                  className="flex-1 bg-gradient-to-r from-primary to-rose-400 text-white py-4 rounded-xl font-semibold shadow-lg hover:scale-[1.02] transition-transform flex items-center justify-center gap-2"
+                >
+                  <ShoppingCart size={20} />
+                  {t('shop.buttons.addToCart')}
+                </button>
+
                   <button className="bg-gray-100 hover:bg-gray-200 text-gray-700 p-4 rounded-xl transition flex items-center justify-center">
                     <Heart size={20} />
                   </button>

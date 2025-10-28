@@ -3,9 +3,12 @@ import { ShoppingCart, Search } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useCart } from "@/app/context/CartContext";
+import { useTranslation } from "react-i18next";
+import LanguageSwitcher from "@/app/components/LanguageSwitcher";
 
 export default function Navbar() {
   const { cartCount } = useCart();
+  const { t } = useTranslation(); // <- get translation function
 
   return (
     <nav className="bg-white py-4 px-8 flex justify-between items-center border-b border-gray-100">
@@ -18,14 +21,14 @@ export default function Navbar() {
 
       {/* Links */}
       <div className="flex gap-8 text-sm font-medium text-gray-700">
-        <Link href="/" className="hover:text-gray-900">Home</Link>
-        <Link href="/shop" className="hover:text-gray-900">Products</Link>
-        <Link href="/about" className="hover:text-gray-900">About</Link>
-        <Link href="/contact" className="hover:text-gray-900">Contact Us</Link>
+        <Link href="/" className="hover:text-gray-900">{t('nav.home')}</Link>
+        <Link href="/shop" className="hover:text-gray-900">{t('nav.products')}</Link>
+        <Link href="/about" className="hover:text-gray-900">{t('nav.about')}</Link>
+        <Link href="/contact" className="hover:text-gray-900">{t('nav.contact')}</Link>
       </div>
 
-      {/* Icons */}
-      <div className="flex gap-4 text-gray-700 items-center">
+      {/* Icons + Language Switcher */}
+      <div className="flex gap-4 items-center text-gray-700">
         <Search size={20} className="cursor-pointer hover:text-gray-900" />
         <Link href="/cart" className="relative">
           <ShoppingCart size={20} className="cursor-pointer hover:text-gray-900" />
@@ -35,6 +38,9 @@ export default function Navbar() {
             </span>
           )}
         </Link>
+
+        {/* Language Switcher */}
+        <LanguageSwitcher />
       </div>
     </nav>
   );

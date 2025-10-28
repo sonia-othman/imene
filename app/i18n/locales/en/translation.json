@@ -1,0 +1,143 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "hero": {
+    "subtitle": "THE PERFECT PRODUCT FOR YOU",
+    "title": "The PERFECT PRODUCT FOR YOU",
+    "description": "Qualified product and excellent customer service is our carefully attitude to every clients",
+    "button": "More Info"
+  },
+   "benefits": {
+    "sectionTitle": "OUR BENEFITS",
+    "bestProduct": {
+      "title": "Best Product",
+      "description": "All items are made with the highest quality ingredients and tested by millions."
+    },
+    "freeShipping": {
+      "title": "Free Shipping",
+      "description": "Enjoy the convenience of free shipping on all orders — no minimum required."
+    },
+    "guarantee": {
+      "title": "Guarantee",
+      "description": "You will be extremely happy with your purchase — we offer a 100% satisfaction guarantee."
+    }
+  },
+    "lasers": {
+    "product1": {
+      "title": "Discover the Beauty",
+      "subtitle": "You Deserve",
+      "description": "Shop our premium laser devices and skincare essentials designed for smooth, radiant confidence."
+    },
+    "product2": {
+      "title": "Your Glow",
+      "subtitle": "Starts Here",
+      "description": "Explore our collection of advanced body laser treatments and care products for flawless results."
+    },
+    "addToCart": "Add to Cart",
+    "exploreMore": "Explore More"
+  },
+   "quotes": {
+    "title": "Smooth, confident, and pain-free, your beauty perfected.",
+    "description": "Experience gentle, fast, and effective laser treatments designed for all skin types. Say goodbye to unwanted hair and hello to long-lasting smoothness, with advanced cooling technology that keeps every session comfortable and safe.",
+    "shopNow": "Shop Now"
+  },
+   "features": {
+    "title": "Features",
+    "pain_free": {
+      "name": "Pain-Free Treatment",
+      "description": "Enjoy smooth skin with gentle pulses designed for maximum comfort."
+    },
+    "fast_effective": {
+      "name": "Fast & Effective",
+      "description": "Covers large areas quickly while delivering lasting results."
+    },
+    "precision": {
+      "name": "Precision Targeting",
+      "description": "Targets only hair follicles, safe for surrounding skin."
+    },
+    "all_skin": {
+      "name": "Suitable for All Skin Types",
+      "description": "Advanced technology adapts to every skin tone safely."
+    },
+    "smoothness": {
+      "name": "Long-Lasting Smoothness",
+      "description": "Reduces hair growth permanently with consistent sessions."
+    },
+    "cooling": {
+      "name": "Smart Cooling System",
+      "description": "Keeps your skin cool and protected throughout the treatment."
+    }
+  },
+    "cart": {
+    "emptyTitle": "Your Cart is Empty",
+    "emptyDescription": "Let's fill it with something special",
+    "continueShopping": "Continue Shopping",
+    "title": "Your Cart",
+    "remove": "Remove",
+    "total": "Total",
+    "proceedCheckout": "Proceed to Checkout",
+    "clearCart": "Clear Cart",
+    "checkout": "Checkout",
+    "fullName": "Full Name",
+    "fullNamePlaceholder": "Enter your full name",
+    "address": "Address",
+    "addressPlaceholder": "Enter your delivery address",
+    "phone1": "Phone Number 1",
+    "phone1Placeholder": "Primary phone",
+    "phone2": "Phone Number 2",
+    "phone2Placeholder": "Secondary phone (optional)",
+    "paymentMethod": "Payment Method",
+    "fillRequired": "Please fill in all required fields",
+    "orderPlaced": "Order placed successfully!",
+    "card": "Card",
+    "cash": "Cash",
+    "orderTotal": "Order Total",
+    "placeOrder": "Place Order"
+  },
+  
+  "shop": {
+    "hero": {
+      "title": "Where Technology Meets Beauty",
+      "description": "Discover our range of advanced body laser devices and skincare essentials designed to deliver smooth, radiant, and confident results with every touch."
+    },
+    "categories": {
+      "keyfeatures": "Key Features",
+      "feature1": "Smart Cooling System",
+      "feature2": "Long-Lasting Smoothness",
+      "feature3": "Suitable for All Skin Types"
+    },
+    "products": {
+      "imene": {
+        "name": "Imene",
+        "badge": "Sale",
+        "quantity":"Quantity",
+        "description": "Advanced body laser device with smart cooling technology. Perfect for achieving smooth, hair-free skin in the comfort of your home.",
+        "features": [
+          "Smart Cooling System",
+          "Safe for All Skin Types",
+          "Long-lasting Results",
+          "Easy to Use"
+        ]
+      },
+      "plp": {
+        "name": "PLP Laser",
+        "badge": null,
+        "description": "Professional-grade laser device for effective hair removal. Features advanced IPL technology for salon-quality results.",
+        "features": [
+          "IPL Technology",
+          "Multiple Intensity Levels",
+          "Large Treatment Window",
+          "Fast Treatment Time"
+        ]
+      }
+    },
+    "buttons": {
+      "addToCart": "Add to Cart"
+    }
+  }
+
+}

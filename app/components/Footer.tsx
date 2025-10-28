@@ -12,7 +12,7 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="container mx-auto bg-gradient-to-b from-primary to-pink-100 text-white py-10" >
+    <footer className="container mx-auto bg-gradient-to-b from-primary to-pink-200 text-white py-10" >
       <div className=" px-4">
         <div className="flex flex-col items-center text-center space-y-6">
           
