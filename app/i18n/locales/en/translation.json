@@ -19,11 +19,11 @@
     },
     "freeShipping": {
       "title": "Free Shipping",
-      "description": "Enjoy the convenience of free shipping on all orders — no minimum required."
+      "description": "Enjoy the convenience of free shipping on all orders no minimum required."
     },
     "guarantee": {
       "title": "Guarantee",
-      "description": "You will be extremely happy with your purchase — we offer a 100% satisfaction guarantee."
+      "description": "You will be extremely happy with your purchase we offer a 100% satisfaction guarantee."
     }
   },
     "lasers": {
@@ -104,6 +104,9 @@
       "title": "Where Technology Meets Beauty",
       "description": "Discover our range of advanced body laser devices and skincare essentials designed to deliver smooth, radiant, and confident results with every touch."
     },
+    "search": {
+      "placeholder": "Search products..."
+    },  
     "categories": {
       "keyfeatures": "Key Features",
       "feature1": "Smart Cooling System",
@@ -138,6 +141,41 @@
     "buttons": {
       "addToCart": "Add to Cart"
     }
+  },
+   "feedback": {
+    "title": "Read reviews,",
+    "subtitle": "written  with confidence.",
+    "rating": "4.2/5",
+    "basedOn": "Based on",
+    "reviews": "reviews",
+    "customersSaying": "What our customers saying",
+    "reviews_data": [
+      {
+        "text": "I was nervous at first, but the treatment was completely painless  and the results are amazing! My skin feels so smooth.",
+        "author": "Sonia",
+        "location": "Sulaimaniyah"
+      },
+      {
+        "text": "After just a few sessions, I barely need to shave anymore. The laser feels gentle but works fast!",
+        "author": "Sima",
+        "location": "Kirkuk"
+      },
+      {
+        "text":"The cooling system makes a huge difference. No redness, no irritation  just flawless skin!",
+        "author": "Ravin",
+        "location": "Duhok"
+      },
+      {
+        "text": "Such a professional service! I noticed visible results within weeks. Definitely worth every penny.",
+        "author": "Ranu",
+        "location": "Hawler"
+      },
+      {
+        "text": "I love how confident I feel now. Smooth skin, no pain, and super quick sessions highly recommend!",
+        "author": "Ivan",
+        "location": "Halabja"
+      }
+    ]
   }
 
 }

@@ -13,7 +13,7 @@ export default function LanguageSwitcher() {
           onClick={() => i18n.changeLanguage(lng)}
           className={`px-3 py-1 rounded ${
             i18n.language === lng
-              ? 'bg-pink-300 text-white'
+              ? 'bg-primary text-white'
               : 'bg-white opacity-70 text-gray-800'
           }`}
         >

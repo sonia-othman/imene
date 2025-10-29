@@ -8,7 +8,10 @@ import LanguageSwitcher from "@/app/components/LanguageSwitcher";
 
 export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  
+  // Detect if current language is RTL
+  const isRTL = i18n.language === "ar" || i18n.language === "ku";
 
   return (
     <div
@@ -89,8 +92,8 @@ export default function LandingPage() {
       {/* ===== Landing Content ===== */}
       <div className="container mx-auto pt-20 md:pt-30 px-4 h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full px-6 md:px-12 lg:px-20">
-          {/* Left Content */}
-          <div className="flex flex-col justify-center space-y-6">
+          {/* Left Content - Add RTL support with items alignment */}
+          <div className={`flex flex-col justify-center space-y-6 ${isRTL ? 'items-end text-right' : 'items-start text-left'}`}>
             <p className="text-xs md:text-sm tracking-widest text-gray-100 uppercase h-6">
               {t('hero.subtitle')}
             </p>

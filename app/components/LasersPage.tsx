@@ -6,11 +6,14 @@ import { ShoppingBasket } from "lucide-react";
 import { useTranslation } from "react-i18next";
 
 export default function LasersPage() {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
   const [showNotification, setShowNotification] = useState(false);
   const { addToCart, cartCount } = useCart();
+
+  // Detect if current language is RTL
+  const isRTL = i18n.language === "ar" || i18n.language === "ku";
 
   const products = [
     {
@@ -75,9 +78,9 @@ export default function LasersPage() {
       {/* Cart Badge */}
       {cartCount > 0 && (
         <Link href="/cart">
-          <div className="fixed top-4 right-4 bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50 cursor-pointer hover:bg-pink-700 transition-all duration-300">
+          <div className={`fixed top-4 ${isRTL ? 'left-4' : 'right-4'} bg-primary text-white w-12 h-12 rounded-full flex items-center justify-center shadow-lg z-50 cursor-pointer hover:bg-pink-700 transition-all duration-300`}>
             <ShoppingBasket className="w-7 h-7" />
-            <span className="absolute top-1 right-1 bg-white text-primary text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center">
+            <span className={`absolute top-1 ${isRTL ? 'left-1' : 'right-1'} bg-white text-primary text-xs font-bold rounded-full w-4 h-4 flex items-center justify-center`}>
               {cartCount}
             </span>
           </div>
@@ -106,16 +109,16 @@ export default function LasersPage() {
                 </div>
 
                 {/* Content */}
-                <div className="space-y-4 sm:space-y-5 md:space-y-6 order-2 md:order-2 px-2 sm:px-0">
-                  <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl  text-gray-900 leading-tight">
-                    {product.title}<br />{product.subtitle}
+                <div className={`space-y-4 sm:space-y-5 md:space-y-6 order-2 md:order-2 px-2 sm:px-0 ${isRTL ? 'text-right' : 'text-left'}`}>
+                  <h1 className="text-2xl sm:text-2xl md:text-3xl lg:text-4xl text-gray-900 leading-tight w-full">
+                    {product.title} {product.subtitle}
                   </h1>
                   
-                  <p className="text-sm sm:text-base text-gray-600 leading-relaxed max-w-md">
+                  <p className={`text-sm sm:text-base text-gray-600 leading-relaxed w-full ${isRTL ? 'ml-auto' : 'mr-auto'} max-w-md`}>
                     {product.description}
                   </p>
                   
-                  <div className="flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 items-stretch sm:items-center pt-2">
+                  <div className={`flex flex-col sm:flex-row flex-wrap gap-3 sm:gap-4 items-stretch sm:items-center pt-2 w-full ${isRTL ? 'sm:justify-end' : 'sm:justify-start'}`}>
                     <button 
                       onClick={() => handleAddToCart(product)}
                       className="bg-primary text-white px-6 sm:px-8 py-3 sm:py-4 hover:bg-pink-300 transition-colors flex items-center justify-center gap-2 font-medium text-sm sm:text-base rounded"
@@ -123,13 +126,13 @@ export default function LasersPage() {
                       {t("lasers.addToCart")} | {product.price}
                     </button>
                     
-                    <Link href="/shop" className="text-pink-300 underline hover:text-pink-700 transition-colors text-sm sm:text-base text-center sm:text-left">
+                    <Link href="/shop" className={`text-pink-300 underline hover:text-pink-700 transition-colors text-sm sm:text-base text-center ${isRTL ? 'sm:text-right' : 'sm:text-left'}`}>
                       {t("lasers.exploreMore")}
                     </Link>
                   </div>
 
                   {/* Slide Indicators */}
-                  <div className="flex gap-2 pt-4 justify-center sm:justify-start">
+                  <div className={`flex gap-2 pt-4 w-full ${isRTL ? 'justify-center sm:justify-end' : 'justify-center sm:justify-start'}`}>
                     {products.map((_, idx) => (
                       <div
                         key={idx}
@@ -145,4 +148,4 @@ export default function LasersPage() {
       </div>
     </div>
   );
-}
+} 
