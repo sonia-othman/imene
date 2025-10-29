@@ -14,10 +14,8 @@ interface Review {
 const FeedbackSliderEmbla = () => {
   const { t, i18n } = useTranslation();
   
-  // Detect if current language is RTL
   const isRTL = i18n.language === "ar" || i18n.language === "ku";
 
-  // Get reviews from translations
   const reviews: Review[] = t('feedback.reviews_data', { returnObjects: true }) as Review[];
 
   const [emblaRef, emblaApi] = useEmblaCarousel({ 

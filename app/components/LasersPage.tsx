@@ -12,7 +12,6 @@ export default function LasersPage() {
   const [showNotification, setShowNotification] = useState(false);
   const { addToCart, cartCount } = useCart();
 
-  // Detect if current language is RTL
   const isRTL = i18n.language === "ar" || i18n.language === "ku";
 
   const products = [

@@ -10,7 +10,6 @@ export default function LandingPage() {
   const [isOpen, setIsOpen] = useState(false);
   const { t, i18n } = useTranslation();
   
-  // Detect if current language is RTL
   const isRTL = i18n.language === "ar" || i18n.language === "ku";
 
   return (
@@ -34,7 +33,7 @@ export default function LandingPage() {
             className="cursor-pointer"
           />
           
-          {/* Desktop Menu - Centered */}
+          {/* Desktop Menu  */}
           <ul className="hidden md:flex space-x-8 text-white font-medium absolute left-1/2 transform -translate-x-1/2">
             <li className="hover:text-slate-700 cursor-pointer transition-colors">
               {t('nav.home')}
@@ -71,9 +70,9 @@ export default function LandingPage() {
               <li className="hover:text-yellow-100 cursor-pointer transition-colors">
                 {t('nav.home')}
               </li>
-              <li className="hover:text-yellow-100 cursor-pointer transition-colors">
+              <Link href="/shop" className="hover:text-yellow-100 cursor-pointer transition-colors">
                 {t('nav.products')}
-              </li>
+              </Link>
               <li className="hover:text-yellow-100 cursor-pointer transition-colors">
                 {t('nav.about')}
               </li>
@@ -92,7 +91,7 @@ export default function LandingPage() {
       {/* ===== Landing Content ===== */}
       <div className="container mx-auto pt-20 md:pt-30 px-4 h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center w-full px-6 md:px-12 lg:px-20">
-          {/* Left Content - Add RTL support with items alignment */}
+          {/* Left Content */}
           <div className={`flex flex-col justify-center space-y-6 ${isRTL ? 'items-end text-right' : 'items-start text-left'}`}>
             <p className="text-xs md:text-sm tracking-widest text-gray-100 uppercase h-6">
               {t('hero.subtitle')}

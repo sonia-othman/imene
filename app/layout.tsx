@@ -3,7 +3,7 @@ import "./globals.css";
 import { Geist, Geist_Mono, Noto_Kufi_Arabic } from "next/font/google";
 import { CartProvider } from "./context/CartContext";
 import Footer from "./components/Footer";
-import "@/app/i18n/client"; // Initialize i18n
+import "@/app/i18n/client";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
