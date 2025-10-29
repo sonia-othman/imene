@@ -113,30 +113,23 @@ const FeedbackSliderEmbla = () => {
             </div>
           </div>
       {/* Navigation Buttons */}
-      <div className="flex items-center justify-center gap-4 mt-8">
-        <button
-          onClick={scrollPrev}
-          className="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200"
-          aria-label={isRTL ? "السابق" : "Previous"}
-        >
-          <ChevronLeft
-            size={28}
-            className={`text-gray-700 ${isRTL ? 'rotate-180' : ''}`}
-          />
-        </button>
+        <div className="flex items-center justify-center gap-4 mt-8">
+          <button
+            onClick={() => (isRTL ? scrollNext() : scrollPrev())}
+            className="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200"
+            aria-label={isRTL ? "التالي" : "Previous"}
+          >
+            <ChevronLeft size={28} className="text-gray-700" />
+          </button>
 
-        <button
-          onClick={scrollNext}
-          className="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200"
-          aria-label={isRTL ? "التالي" : "Next"}
-        >
-          <ChevronRight
-            size={28}
-            className={`text-gray-700 ${isRTL ? 'rotate-180' : ''}`}
-          />
-        </button>
-      </div>
-
+          <button
+            onClick={() => (isRTL ? scrollPrev() : scrollNext())}
+            className="w-12 h-12 bg-white rounded-full border border-gray-200 flex items-center justify-center hover:bg-gray-50 transition-all duration-200"
+            aria-label={isRTL ? "السابق" : "Next"}
+          >
+            <ChevronRight size={28} className="text-gray-700" />
+          </button>
+        </div>
         </div>
       </div>
     </section>

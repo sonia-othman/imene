@@ -12,22 +12,22 @@ export default function Footer() {
   ];
 
   return (
-    <footer className="container mx-auto bg-gradient-to-b from-primary to-pink-200 text-white py-10" >
-      <div className=" px-4">
+    <footer className="w-full bg-gradient-to-b from-primary to-pink-200 text-white py-10">
+      <div className="container mx-auto px-4 max-w-7xl">
         <div className="flex flex-col items-center text-center space-y-6">
-          
+
           {/* Logo */}
-          <Image 
-            src="/images/imenelogo.png" 
-            width={100} 
-            height={100} 
-            alt="logo" 
-            className="text-2xl font-bold"
+          <Image
+            src="/images/imenelogo.png"
+            width={100}
+            height={100}
+            alt="logo"
+            className="object-contain"
           />
 
           {/* Navigation */}
           <nav>
-            <ul className="flex flex-wrap justify-center gap-6 text-white mb-2">
+            <ul className="flex flex-wrap justify-center gap-4 sm:gap-6 text-white mb-2">
               <li><Link href="/" className="hover:text-gray-100 transition-colors">Home</Link></li>
               <li><Link href="/shop" className="hover:text-gray-100 transition-colors">Product</Link></li>
               <li><Link href="#" className="hover:text-gray-100 transition-colors">Services</Link></li>
@@ -37,17 +37,17 @@ export default function Footer() {
           </nav>
 
           {/* Location */}
-          <div className="flex items-center space-x-2 text-sm text-white/90">
+          <div className="flex flex-wrap justify-center items-center gap-2 text-sm md:text-base text-white/90">
             <MapPin className="w-4 h-4" />
-            <span>Sulaimaniyah, Chwarta Street</span> 
-            <span>|</span> 
-              <PhoneCall className="w-4 h-4" />
+            <span>Sulaimaniyah, Chwarta Street</span>
+          </div>
+      <div className="flex flex-wrap justify-center items-center gap-2 text-sm md:text-base text-white/90">
+            <PhoneCall className="w-4 h-4" />
             <span>0771 900 9090</span>
           </div>
-
           {/* Social Media Links */}
           <div className="mt-4">
-            <div className="flex justify-center space-x-4">
+            <div className="flex justify-center gap-3 sm:gap-4 flex-wrap">
               {socialMedia.map((social) => (
                 <a
                   key={social.name}
@@ -61,9 +61,9 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Footer bottom */}
+          {/* Footer Bottom */}
           <div className="border-t border-white/40 pt-6 w-full max-w-md">
-            <p className="text-sm text-white/90">
+            <p className="text-sm md:text-base text-white/90">
               © {currentYear} All rights reserved.
             </p>
           </div>
