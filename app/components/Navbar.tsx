@@ -18,7 +18,6 @@ export default function Navbar({ onSearchChange }: NavbarProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
-
   const handleSearchChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value;
     setSearchQuery(value);
@@ -26,7 +25,6 @@ export default function Navbar({ onSearchChange }: NavbarProps) {
       onSearchChange(value);
     }
   };
-
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (onSearchChange) {

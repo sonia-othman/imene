@@ -1,10 +1,10 @@
 import { Facebook, Instagram, Ghost, MapPin, PhoneCall } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-
+import { useTranslation } from "react-i18next";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
+  const { t, i18n } = useTranslation();
   const socialMedia = [
     { name: 'Facebook', icon: <Facebook className="w-6 h-6" />, href: '#' },
     { name: 'Instagram', icon: <Instagram className="w-6 h-6" />, href: 'https://www.instagram.com/imenelaser.iq?igsh=azl4amMza3R3ZnZ2' },
@@ -27,12 +27,10 @@ export default function Footer() {
 
           {/* Navigation */}
           <nav>
-            <ul className="flex flex-wrap justify-center gap-4 sm:gap-6 text-white mb-2">
-              <li><Link href="/" className="hover:text-gray-100 transition-colors">Home</Link></li>
-              <li><Link href="/shop" className="hover:text-gray-100 transition-colors">Product</Link></li>
-              <li><Link href="#" className="hover:text-gray-100 transition-colors">Services</Link></li>
-              <li><Link href="#" className="hover:text-gray-100 transition-colors">Blog</Link></li>
-              <li><Link href="#" className="hover:text-gray-100 transition-colors">Contact</Link></li>
+            <ul className="flex text-md flex-wrap justify-center gap-4 sm:gap-6 text-white mb-2">
+              <li><Link href="/" className="hover:text-gray-200 transition-colors">{t('nav.home')}</Link></li>
+              <li><Link href="/shop" className="hover:text-gray-200 transition-colors">{t('nav.products')}</Link></li>
+            
             </ul>
           </nav>
 

@@ -132,7 +132,6 @@ export default function CartPage() {
           ))}
         </div>
 
-
         {/* Total and Checkout */}
          <div className="bg-white/80 backdrop-blur-md rounded-2xl p-8 shadow-md border border-pink-100">
           <div className="flex justify-between items-center mb-6">
@@ -155,7 +154,6 @@ export default function CartPage() {
           </div>
         </div>
         </div>
-
 
        {showCheckoutForm && (
           <div className="fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50">
@@ -285,7 +283,6 @@ export default function CartPage() {
             >
               {t("cart.placeOrder")}
             </button>
-
             </div>
           </div>
         </div>

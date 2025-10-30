@@ -8,7 +8,6 @@ import { useTranslation } from "react-i18next";
 interface Review {
   text: string;
   author: string;
-  location: string;
 }
 
 const FeedbackSliderEmbla = () => {
@@ -101,9 +100,7 @@ const FeedbackSliderEmbla = () => {
                       <div className={`font-semibold text-gray-900 text-lg ${isRTL ? 'leading-relaxed' : ''}`}>
                         {review.author}
                       </div>
-                      <div className={`text-gray-600 text-sm ${isRTL ? 'leading-relaxed' : ''}`}>
-                        {review.location}
-                      </div>
+                   
                     </div>
                   </div>
                 </div>
